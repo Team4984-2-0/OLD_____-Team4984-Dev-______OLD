@@ -31,16 +31,28 @@ public final class Constants {
   
   
     //SparkMax Motor ID's
-    public static final int MOTOR_LEFT_FRONT = 1;
-    public static final int MOTOR_LEFT_BACK = 2;
-    public static final int MOTOR_RIGHT_FRONT = 3;
-    public static final int MOTOR_RIGHT_BACK = 4;
-  
+    public static final int MOTOR_LEFT_FRONT = 0;
+    public static final int MOTOR_LEFT_BACK = 1;
+    public static final int MOTOR_RIGHT_FRONT = 2;
+    public static final int MOTOR_RIGHT_BACK = 3;
+
   
     //SparkMax OpenRamp Rate
     public static final double OPEN_LEFT_LOOP_RATE = 0.8;
     public static final double OPEN_RIGHT_LOOP_RATE = 0.8;
-  
+
+    //Intake Motor Controllers
+    public static final int MOTOR_INTAKE_LEFT = 4;
+    public static final int MOTOR_INTAKE_RIGHT = 5;
+
+    //Belt Motor Controllers
+    public static final int MOTOR_BELT_BACK = 6;
+
+    //Hopper Motor Controller
+    public static final int MOTOR_HOPPER = 7;
+
+    //Pnumatic system = 3 Tanks
+
   
 
 }
