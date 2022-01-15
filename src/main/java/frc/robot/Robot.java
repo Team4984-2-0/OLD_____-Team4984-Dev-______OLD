@@ -12,7 +12,7 @@ import frc.robot.limelight.LLControllers;
 import frc.robot.limelight.LL_Update_Tracking;
 import frc.robot.limelight.LLdriveControl;
 import frc.robot.limelight.LLmain;
-import frc.robot.subsystems.DriveTrain;
+import frc.robot.subsystems.*;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.cscore.UsbCamera;
@@ -33,6 +33,11 @@ public class Robot extends TimedRobot {
   public static LLdriveControl lldriveControl = new LLdriveControl();
   public static LLmain llmain = new LLmain();
   public static LLControllers llcontrollers = new LLControllers();
+  public static BallIntake ballIntake = new BallIntake(Constants.MOTOR_BALLINTAKE_SPEED);
+  public static Belt belt = new Belt(Constants.MOTOR_BELT_SPEED_LOWER);
+  public static ChainAndHook chainAndHook = new ChainAndHook();
+  public static Hopper hopper = new Hopper(Constants.HOPPER_SPEED);
+  public static Tailgate tailgate = new Tailgate();
 
   public static RobotContainer m_robotContainer;
 
@@ -83,7 +88,7 @@ public class Robot extends TimedRobot {
 
     LL_Update_Tracking.Tracking();
 
-        llcontrollers.controllers();
+        llcontrollers.controllers(0.0, 0.0);
 
   }
 

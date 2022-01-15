@@ -45,11 +45,17 @@ public final class Constants {
     public static final int MOTOR_INTAKE_LEFT = 4;
     public static final int MOTOR_INTAKE_RIGHT = 5;
 
+    public static final double MOTOR_BALLINTAKE_SPEED = 5.5;
+
     //Belt Motor Controllers
-    public static final int MOTOR_BELT_BACK = 6;
+    public static final int MOTOR_BELT_MAIN = 6;
+    public static final int MOTOR_BELT_UPPER = 7;
+
+    public static final double MOTOR_BELT_SPEED_LOWER = 5.5;
 
     //Hopper Motor Controller
-    public static final int MOTOR_HOPPER = 7;
+    public static final int MOTOR_HOPPER = 8;
+    public static final double HOPPER_SPEED = 1.0;
 
     //Pnumatic system = 3 Tanks
 

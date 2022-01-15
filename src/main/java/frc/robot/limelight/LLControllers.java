@@ -10,7 +10,7 @@ import frc.robot.RobotContainer;
 /** Add your docs here. */
 public class LLControllers {
 
-    public void controllers(){
+    public void controllers(double speed, double d){
 
         double steer = RobotContainer.driverJoystickRight.getX();
         double drive = -RobotContainer.driverJoystickRight.getY();
@@ -27,7 +27,9 @@ public class LLControllers {
         }
         else
         {
-            LLdriveControl.m_Drive.arcadeDrive(0.0, 0.0);
+
+            //TODO change to 0.0 if speed current does not change
+            LLdriveControl.m_Drive.arcadeDrive(speed, speed);
         }
         }
         else

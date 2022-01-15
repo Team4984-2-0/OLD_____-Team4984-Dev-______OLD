@@ -14,7 +14,7 @@ public class Tailgate extends SubsystemBase {
   private Solenoid TailgateSet;
 
   public Tailgate() {
-    TailgateSet = new Solenoid(0, null, 3);
+    TailgateSet = new Solenoid(0, null, 1);
     addChild("TailgateSet", TailgateSet);
   }
 
