@@ -4,6 +4,9 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.PneumaticHub;
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
@@ -28,6 +31,11 @@ import edu.wpi.first.cscore.VideoSource;
  */
 public class Robot extends TimedRobot {
   public static Command m_autonomousCommand;
+
+  // Attempt at Pneumatics #1 ~HEREWEGO!~
+  public static PneumaticHub pneumatics = new PneumaticHub(0);
+
+  public static Compressor pcmCompressor = new Compressor(0, PneumaticsModuleType.CTREPCM);
 
   public static DriveTrain driveTrain = new DriveTrain();
   public static LLdriveControl lldriveControl = new LLdriveControl();
@@ -188,5 +196,8 @@ public class Robot extends TimedRobot {
 
     m_autonomousCommand = (new AutoCommand());
 
+    
+    // So, should I initialize the thing
+    pneumatics.enableCompressorAnalog(100, 120);
   }
 }
